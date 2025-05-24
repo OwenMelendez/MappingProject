@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "681ea4a6f3ccaf7dc509a8de"
+  },
+  "numIdentificacion": {
+    "$numberLong": "123456"
+  },
+  "nombre": "juan",
+  "apellido": "rua",
+  "email": "a@gmail.com",
+  "contraseña": "123",
+  "rol": "Admin",
+  "_class": "com.example.mapping.entidad.Datos"
+},
+{
+  "_id": {
+    "$oid": "68263260a3aa914a6ba87e90"
+  },
+  "numIdentificacion": {
+    "$numberLong": "1"
+  },
+  "nombre": "mari",
+  "apellido": "cuesta",
+  "email": "mari@gmnail.com",
+  "contraseña": "12334",
+  "rol": "Usuario",
+  "_class": "com.example.mapping.entidad.Datos"
+},
+{
+  "_id": {
+    "$oid": "6827be857c95b167bf5a1ce5"
+  },
+  "numIdentificacion": {
+    "$numberLong": "122"
+  },
+  "nombre": "Arelis Isabel",
+  "apellido": "Capela Bolaño",
+  "email": "ruacapelaj@gmail.com",
+  "contraseña": "º",
+  "rol": "Usuario",
+  "_class": "com.example.mapping.entidad.Datos"
+},
+{
+  "_id": {
+    "$oid": "6827bee87c95b167bf5a1ce6"
+  },
+  "numIdentificacion": {
+    "$numberLong": "3"
+  },
+  "nombre": "asd2",
+  "apellido": "sdsa",
+  "email": "f@gmail.com",
+  "contraseña": "123",
+  "rol": "Usuario",
+  "_class": "com.example.mapping.entidad.Datos"
+},
+{
+  "_id": {
+    "$oid": "6827bfe3ac95135c8bf9feed"
+  },
+  "numIdentificacion": {
+    "$numberLong": "45"
+  },
+  "nombre": "jose",
+  "apellido": "marana",
+  "email": "j@gmail.com",
+  "contraseña": "123",
+  "rol": "Usuario",
+  "_class": "com.example.mapping.entidad.Datos"
+}]

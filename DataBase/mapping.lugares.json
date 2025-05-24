@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "681dfff235bd28e6bced9e0e"
+  },
+  "nombre": "D101",
+  "piso": 1,
+  "bloque": "D",
+  "categoria": "Salon de Clases"
+},
+{
+  "_id": {
+    "$oid": "681e001035bd28e6bced9e0f"
+  },
+  "nombre": "C202",
+  "piso": 2,
+  "bloque": "C",
+  "categoria": "Salon de Clases"
+},
+{
+  "_id": {
+    "$oid": "681e003135bd28e6bced9e10"
+  },
+  "nombre": "Cafeteria",
+  "piso": 2,
+  "bloque": "General",
+  "categoria": "Comedor"
+},
+{
+  "_id": {
+    "$oid": "681e004835bd28e6bced9e11"
+  },
+  "nombre": "F402",
+  "piso": 4,
+  "bloque": "F",
+  "categoria": "Salon de Clases"
+},
+{
+  "_id": {
+    "$oid": "681e005c35bd28e6bced9e12"
+  },
+  "nombre": "C602",
+  "piso": 6,
+  "bloque": "C",
+  "categoria": "Salon de Clases"
+},
+{
+  "_id": {
+    "$oid": "681e006e35bd28e6bced9e13"
+  },
+  "nombre": "C302",
+  "piso": 3,
+  "bloque": "C",
+  "categoria": "Salon de Clases"
+},
+{
+  "_id": {
+    "$oid": "68266f7382edd261fd788c9a"
+  },
+  "nombre": "asd",
+  "piso": "1",
+  "bloque": "C",
+  "categoria": "Novela",
+  "_class": "com.example.mapping.entidad.Lugar"
+}]

@@ -1,0 +1,124 @@
+[{
+  "_id": {
+    "$oid": "681e46f9bb33a5b6d630ec43"
+  },
+  "lugarId": {
+    "$oid": "681dfff235bd28e6bced9e0e"
+  },
+  "origen": "D101",
+  "destino": "Cafeteria"
+},
+{
+  "_id": {
+    "$oid": "681e4702bb33a5b6d630ec44"
+  },
+  "lugarId": {
+    "$oid": "681dfff235bd28e6bced9e0e"
+  },
+  "origen": "D101",
+  "destino": "F402"
+},
+{
+  "_id": {
+    "$oid": "681e470bbb33a5b6d630ec45"
+  },
+  "lugarId": {
+    "$oid": "681dfff235bd28e6bced9e0e"
+  },
+  "origen": "D101",
+  "destino": "C602"
+},
+{
+  "_id": {
+    "$oid": "681e4715bb33a5b6d630ec46"
+  },
+  "lugarId": {
+    "$oid": "681dfff235bd28e6bced9e0e"
+  },
+  "origen": "D101",
+  "destino": "C302"
+},
+{
+  "_id": {
+    "$oid": "681e4724bb33a5b6d630ec47"
+  },
+  "lugarId": {
+    "$oid": "681e001035bd28e6bced9e0f"
+  },
+  "origen": "C202",
+  "destino": "Cafeteria"
+},
+{
+  "_id": {
+    "$oid": "681e477cbb33a5b6d630ec48"
+  },
+  "lugarId": {
+    "$oid": "681e001035bd28e6bced9e0f"
+  },
+  "origen": "C202",
+  "destino": "F402"
+},
+{
+  "_id": {
+    "$oid": "681e4785bb33a5b6d630ec49"
+  },
+  "lugarId": {
+    "$oid": "681e001035bd28e6bced9e0f"
+  },
+  "origen": "C202",
+  "destino": "C602"
+},
+{
+  "_id": {
+    "$oid": "681e478cbb33a5b6d630ec4a"
+  },
+  "lugarId": {
+    "$oid": "681e001035bd28e6bced9e0f"
+  },
+  "origen": "C202",
+  "destino": "C302"
+},
+{
+  "_id": {
+    "$oid": "6826440bbf1e5c1570953583"
+  },
+  "lugarId": {
+    "$oid": "681dfff235bd28e6bced9e0e"
+  },
+  "origen": "D101\r\n",
+  "destino": "asdsadsa",
+  "_class": "com.example.mapping.entidad.Rutas"
+},
+{
+  "_id": {
+    "$oid": "68266e5582edd261fd788c99"
+  },
+  "lugarId": {
+    "$oid": "681e003135bd28e6bced9e10"
+  },
+  "origen": "Cafeteria",
+  "destino": "D101",
+  "_class": "com.example.mapping.entidad.Rutas"
+},
+{
+  "_id": {
+    "$oid": "6826b8afbb6a66e583f49ed9"
+  },
+  "lugarId": {
+    "$oid": "681dfff235bd28e6bced9e0e"
+  },
+  "origen": "D101",
+  "destino": "C202",
+  "ruta": "assets/prueba.mp4"
+},
+{
+  "_id": {
+    "$oid": "682782ee8fce218076b76968"
+  },
+  "lugarId": {
+    "$oid": "681e001035bd28e6bced9e0f"
+  },
+  "origen": "C202",
+  "destino": "D101",
+  "ruta": "assets/prueba2.mp4"
+}]

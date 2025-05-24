@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mapping Home</title>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icono -->
+    <link rel="icon" href="/assets/mappingicon.webp" />
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="/css/style_index.css">
+</head>
+<body class="text-white">
+
+<!-- Navbar -->
+<nav class=" shadow p-4 flex justify-between items-center">
+    <a href="#"><img src="assets/mappingicon.webp" alt="Mapping Icon" class="h-10 animate__animated animate__bounce"></a>
+    <div class="space-x-2">
+        <a th:if="${session.rol == 'Admin'}" href="/admin" class="hover:bg-sky-600 text-white py-2 px-4 rounded transition-colors duration-300 transition-transform hover:-translate-y-2">
+            <i class="fa-solid fa-user-shield"></i> Panel de Administración
+        </a>
+        <a th:if="${session.rol != null}" href="/logout" class="hover:bg-red-600 text-white py-2 px-4 rounded transition-colors duration-300 transition-transform hover:-translate-y-2">
+            <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+        </a>
+    </div>
+</nav>
+
+<!-- Header con video de fondo -->
+<div class="relative h-screen">
+    <video src="assets/backgroundvideo.mp4" autoplay muted loop class="absolute inset-0 w-full h-full object-cover"></video>
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <header class="absolute inset-0 flex items-center justify-center z-10">
+        <a href="/BusquedaSalones"
+           class="btn btn-outline-info text-white text-lg px-6 py-3 border border-sky-400 hover:bg-sky-600 rounded shadow-lg animate__animated animate__zoomIn transition transition-colors transition-transform duration-300  ">
+            <i class="fa-solid fa-magnifying-glass-location me-2"></i> Buscar Ubicación
+        </a>
+    </header>
+</div>
+
+<main class="container mx-auto py-12 px-4">
+    <!-- Características -->
+    <section class="mb-12 animate__animated animate__fadeInUp">
+        <h2 class="text-3xl font-bold text-center mb-8"><i class="fa-solid fa-gears me-2"></i> Características Clave</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white bg-opacity-10 p-6 rounded shadow text-center transition duration-300 transition-transform hover:-translate-y-2">
+                <i class="fa-solid fa-location-dot fa-2x text-blue-400 mb-4"></i>
+                <h5 class="text-xl font-semibold">Navegación Fácil</h5>
+                <p>Te guía desde tu ubicación actual hasta donde quieras ir.</p>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded shadow text-center transition duration-300 transition-transform hover:-translate-y-2">
+                <i class="fa-solid fa-database fa-2x text-blue-400 mb-4"></i>
+                <h5 class="text-xl font-semibold">Base de Datos Completa</h5>
+                <p>Información detallada sobre salones y edificios del campus.</p>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded shadow text-center transition duration-300 transition-transform hover:-translate-y-2">
+                <i class="fa-solid fa-face-smile fa-2x text-blue-400 mb-4"></i>
+                <h5 class="text-xl font-semibold">Interfaz Amigable</h5>
+                <p>Diseñada para ser fácil e intuitiva desde el primer momento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona -->
+    <section class="mb-12 animate__animated animate__fadeInLeft">
+        <h2 class="text-3xl font-bold text-center mb-6">¿Cómo Funciona?</h2>
+        <div class="max-w-xl mx-auto space-y-4">
+            <div class="flex items-center">
+                <div class="bg-blue-500 text-white w-10 h-10 flex items-center justify-center rounded-full mr-4 transition duration-300 transition-transform hover:-translate-y-2">1</div>
+                <p>Usa MAPPING desde tu dispositivo.</p>
+            </div>
+            <div class="flex items-center">
+                <div class="bg-blue-500 text-white w-10 h-10 flex items-center justify-center rounded-full mr-4 transition duration-300 transition-transform hover:-translate-y-2">2</div>
+                <p>Ingresa tu destino o selecciona un lugar favorito.</p>
+            </div>
+            <div class="flex items-center">
+                <div class="bg-blue-500 text-white w-10 h-10 flex items-center justify-center rounded-full mr-4 transition duration-300 transition-transform hover:-translate-y-2">3</div>
+                <p>¡Listo! Sigue la ruta y llega fácilmente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="mb-12 animate__animated animate__fadeInRight">
+        <h2 class="text-3xl font-bold text-center mb-6">
+            <i class="fa-solid fa-check-double me-2"></i> Beneficios
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white bg-opacity-10 rounded p-4 flex items-start transition duration-300 transition-transform hover:-translate-y-2">
+                <i class="fa-solid fa-circle-check text-green-400 mr-3 mt-1"></i>
+                <span>Ahorra tiempo buscando salones.</span>
+            </div>
+            <div class="bg-white bg-opacity-10 rounded p-4 flex items-start transition duration-300 transition-transform hover:-translate-y-2">
+                <i class="fa-solid fa-circle-check text-green-400 mr-3 mt-1"></i>
+                <span>Llega puntual reduciendo el estrés.</span>
+            </div>
+            <div class="bg-white bg-opacity-10 rounded p-4 flex items-start transition duration-300 transition-transform hover:-translate-y-2">
+                <i class="fa-solid fa-circle-check text-green-400 mr-3 mt-1"></i>
+                <span>Descubre lugares interesantes del campus.</span>
+            </div>
+            <div class="bg-white bg-opacity-10 rounded p-4 flex items-start transition duration-300 transition-transform hover:-translate-y-2">
+                <i class="fa-solid fa-circle-check text-green-400 mr-3 mt-1"></i>
+                <span>Facilita la orientación a nuevos estudiantes.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Power BI -->
+    <section class="mb-12 animate__animated animate__fadeInUp">
+        <h2 class="text-3xl font-bold text-center mb-6">
+            <i class="fa-solid fa-chart-column me-2"></i> Registro de datos actuales
+        </h2>
+        <iframe
+                title="Dashboard Power BI"
+                src="https://app.powerbi.com/view?r=eyJrIjoiZDNmNDg3YTgtMmU3Mi00YmNhLWI1ZjktZGRlOWIwYTM0NGFiIiwidCI6IjlkMTJiZjNmLWU0ZjYtNDdhYi05MTJmLTFhMmYwZmM0OGFhNCIsImMiOjR9"
+                class="w-full h-[600px] rounded shadow-lg border-0"></iframe>
+    </section>
+
+    <!-- ¿Quiénes somos? -->
+    <section class="text-center animate__animated animate__fadeIn">
+        <button id="quienesBtn" type="button"
+                class="bg-white bg-opacity-10 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300 transition-transform hover:-translate-y-2 focus:outline-none">
+            <i class="fa-solid fa-users me-2"></i> ¿Quiénes somos?
+        </button>
+    </section>
+
+    <!-- Modal con fondo blur -->
+    <div id="quienesModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+        <div class="bg-gray-700 bg-opacity-90 text-white rounded-lg shadow-lg p-8 w-full max-w-md relative animate__animated animate__zoomIn">
+            <button id="closeModal" class="absolute top-2 right-2 text-white hover:text-blue-300 text-2xl">&times;</button>
+            <div class="flex flex-col items-center">
+                <img src="assets/mappingicon.webp" alt="Mapping Icon" class="h-12 mb-4 animate__animated animate__bounce">
+                <i class="fa-solid fa-users me-2"></i><p class="text-lg font-semibold mb-2">¿Quiénes somos?</p>
+                <p>Owen Melendez</p>
+                <p>Juan Rua</p>
+                <p>Camilo Ponton</p>
+                <p>Miguel Acosta</p> <br>
+                <p>Somos un equipo dedicado a mejorar la experiencia de navegación en el campus.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('quienesBtn');
+        const modal = document.getElementById('quienesModal');
+        const close = document.getElementById('closeModal');
+        btn.onclick = () => modal.classList.remove('hidden');
+        close.onclick = () => modal.classList.add('hidden');
+        modal.onclick = (e) => {
+          if (e.target === modal) modal.classList.add('hidden');
+        };
+    </script>
+</main>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/d3d9223bfe.js" crossorigin="anonymous"></script>
+</body>
+</html>

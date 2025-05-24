@@ -1,0 +1,121 @@
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,0.07);
+  animation: fadeIn 0.4s ease-in-out;
+  background: none !important;
+  color: #fff !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#searchInput {
+  max-width: 350px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+#searchInput::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.btn, .btn-sm, .btn-outline-secondary {
+  color: #fff !important;
+  background: none !important;
+  border: 1px solid #0284c7 !important;
+  transition: background 0.3s;
+  font-weight: 600;
+}
+
+.btn-outline-secondary {
+  border: 1px solid #fff !important;
+}
+
+.btn:hover, .btn-outline-secondary:hover {
+  background: #0284c7 !important;
+  color: #fff !important;
+  border: 1px solid #0284c7 !important;
+}
+
+/* Botón Rol: texto blanco, hover azul */
+.btn-outline-warning {
+  color: #fff !important;
+  background: none !important;
+  border: 1px solid #0284c7 !important;
+  font-weight: 600;
+}
+.btn-outline-warning:hover {
+  background: #0284c7 !important;
+  color: #fff !important;
+  border: 1px solid #0284c7 !important;
+}
+
+/* Botón Eliminar: texto negro, hover rojo */
+.btn-outline-danger {
+  background: none !important;
+  border: 1px solid #0284c7 !important;
+  font-weight: 600;
+}
+.btn-outline-danger:hover {
+  background: #e11d48 !important;
+  color: #fff !important;
+  border: 1px solid #e11d48 !important;
+}
+
+.btn-sm i {
+  margin-right: 5px;
+}
+
+/* Tabla sin fondo y texto blanco */
+.table,
+.table-striped > tbody > tr,
+.table-hover > tbody > tr {
+  background: none !important;
+  color: #fff !important;
+}
+
+.table {
+  color: #fff !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(2,132,199,0.05) !important;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: rgba(2,132,199,0.15) !important;
+}
+
+.table thead th, .table-primary {
+  background: none !important;
+  color: #fff !important;
+  border-bottom: 2px solid #0284c7;
+}
+
+.table td, .table th {
+  background: none !important;
+  color: #fff !important;
+  vertical-align: middle;
+  border-color: rgba(255,255,255,0.1);
+}
+
+.header-icon {
+  font-size: 1.5rem;
+  color: #0284c7;
+}
+
+/* Scroll para la tabla de usuarios */
+.scroll-table {
+  max-height: 500px;
+  overflow-y: auto;
+}

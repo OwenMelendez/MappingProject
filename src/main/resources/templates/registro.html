@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style_register.css" />
+    <link rel="icon" href="assets/mappingicon.webp" />
+</head>
+
+<body>
+
+<div class="flex items-center justify-center w-full max-w-md">
+    <form th:action="@{/registrar}" method="post" class="form_container" id="registerForm" novalidate>
+        <div class="title_container">
+            <img class="icon-mapping animate__animated animate__bounce" src="assets/mappingicon.webp" alt="icon-mapping" />
+            <p class="title">Register</p>
+            <p class="subtitle">Signup now and get full access to our app.</p>
+        </div>
+
+        <div th:if="${mensaje != null}"
+             class="alert animate__animated animate__fadeIn mb-0 p-0 rounded-md text-center"
+             th:classappend="${mensaje.contains('error')} ? ' alert-error visible' : ' alert-success visible'"
+             th:text="${mensaje}">
+        </div>
+
+        <!-- ID -->
+        <div class="input_container relative">
+            <label class="input_label" for="id_field">ID</label>
+            <div class="input_icon_wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" class="input_icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+                <input type="number" class="input_field pl-10" name="id" id="id_field" placeholder="Your ID" required />
+            </div>
+            <div class="field-error text-red-500 text-xs absolute left-0 top-full mt-1 hidden" id="id_error"></div>
+        </div>
+
+        <!-- Nombre -->
+        <div class="input_container relative">
+            <label class="input_label" for="nombre_field">Nombre</label>
+            <div class="input_icon_wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" class="input_icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A10.95 10.95 0 0112 15c2.755 0 5.27 1.007 7.121 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <input type="text" class="input_field pl-10" name="nombre" id="nombre_field" placeholder="Nombre" required minlength="2" />
+            </div>
+            <div class="field-error text-red-500 text-xs absolute left-0 top-full mt-1 hidden" id="nombre_error"></div>
+        </div>
+
+        <!-- Apellido -->
+        <div class="input_container relative">
+            <label class="input_label" for="apellido_field">Apellido</label>
+            <div class="input_icon_wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" class="input_icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A10.95 10.95 0 0112 15c2.755 0 5.27 1.007 7.121 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <input type="text" class="input_field pl-10" name="apellido" id="apellido_field" placeholder="Apellido" required minlength="2" />
+            </div>
+            <div class="field-error text-red-500 text-xs absolute left-0 top-full mt-1 hidden" id="apellido_error"></div>
+        </div>
+
+        <!-- Email -->
+        <div class="input_container relative">
+            <label class="input_label" for="email_field">Email</label>
+            <div class="input_icon_wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" class="input_icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m0 0l-4 4m4-4l-4-4m12 0l4 4m-4-4v8" />
+                </svg>
+                <input type="email" class="input_field pl-10" name="email" id="email_field" placeholder="name@mail.com" required />
+            </div>
+            <div class="field-error text-red-500 text-xs absolute left-0 top-full mt-1 hidden" id="email_error"></div>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="input_container relative">
+            <label class="input_label" for="password_field">Contraseña</label>
+            <div class="input_icon_wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" class="input_icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <rect width="16" height="12" x="4" y="11" rx="2" ry="2" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 11V7a4 4 0 10-8 0v4" />
+                </svg>
+                <input type="password" class="input_field pl-10" name="contraseña" id="password_field" placeholder="Contraseña" required minlength="6" />
+            </div>
+            <div class="field-error text-red-500 text-xs absolute left-0 top-full mt-1 hidden" id="password_error"></div>
+        </div>
+
+        <button type="submit" class="sign-in_btn mt-2">Submit</button>
+
+        <p class="text-center mt-6 text-gray-200 text-sm">¿Ya tienes una cuenta?
+            <a th:href="@{/inicio}" class="text-blue-400 font-semibold hover:text-blue-300 transition">Inicia aquí</a>
+        </p>
+    </form>
+</div>
+
+<script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+        // Limpiar errores previos
+        ['id', 'nombre', 'apellido', 'email', 'password'].forEach(function(field) {
+            document.getElementById(field + '_error').classList.add('hidden');
+            document.getElementById(field + '_error').textContent = '';
+        });
+
+        let hasError = false;
+
+        // Validación ID
+        const id = document.getElementById('id_field');
+        if (!id.value || isNaN(id.value) || Number(id.value) <= 0) {
+            document.getElementById('id_error').textContent = 'El ID es obligatorio y debe ser un número positivo.';
+            document.getElementById('id_error').classList.remove('hidden');
+            hasError = true;
+        }
+
+        // Validación Nombre
+        const nombre = document.getElementById('nombre_field');
+        if (!nombre.value || nombre.value.trim().length < 2) {
+            document.getElementById('nombre_error').textContent = 'El nombre es obligatorio y debe tener al menos 2 caracteres.';
+            document.getElementById('nombre_error').classList.remove('hidden');
+            hasError = true;
+        }
+
+        // Validación Apellido
+        const apellido = document.getElementById('apellido_field');
+        if (!apellido.value || apellido.value.trim().length < 2) {
+            document.getElementById('apellido_error').textContent = 'El apellido es obligatorio y debe tener al menos 2 caracteres.';
+            document.getElementById('apellido_error').classList.remove('hidden');
+            hasError = true;
+        }
+
+        // Validación Email
+        const email = document.getElementById('email_field');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email.value || !emailRegex.test(email.value)) {
+            document.getElementById('email_error').textContent = 'El email es obligatorio y debe tener un formato válido.';
+            document.getElementById('email_error').classList.remove('hidden');
+            hasError = true;
+        }
+
+        // Validación Contraseña
+        const password = document.getElementById('password_field');
+        if (!password.value || password.value.length < 6) {
+            document.getElementById('password_error').textContent = 'La contraseña es obligatoria y debe tener al menos 6 caracteres.';
+            document.getElementById('password_error').classList.remove('hidden');
+            hasError = true;
+        }
+
+        if (hasError) {
+            e.preventDefault();
+        }
+    });
+</script>
+
+</body>
+</html>

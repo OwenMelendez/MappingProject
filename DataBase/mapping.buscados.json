@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "6826bb87bb6a66e583f49eec"
+  },
+  "ruta": {
+    "$oid": "681dfff235bd28e6bced9e0e"
+  },
+  "usuario": {
+    "$oid": "681ea4a6f3ccaf7dc509a8de"
+  }
+}]
