@@ -109,7 +109,7 @@
   },
   "origen": "D101",
   "destino": "C202",
-  "ruta": "assets/prueba.mp4"
+  "ruta": "assets/D101aC202.mp4"
 },
 {
   "_id": {
@@ -120,5 +120,16 @@
   },
   "origen": "C202",
   "destino": "D101",
-  "ruta": "assets/prueba2.mp4"
+  "ruta": "assets/C202aD101.mp4"
+},
+{
+  "_id": {
+    "$oid": "6831f476c081361659e7ecec"
+  },
+  "lugarId": {
+    "$oid": "6831f451c081361659e7eceb"
+  },
+  "origen": "Biblioteca",
+  "destino": "D101",
+  "_class": "com.example.mapping.entidad.Rutas"
 }]

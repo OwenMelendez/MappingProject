@@ -54,11 +54,11 @@
 },
 {
   "_id": {
-    "$oid": "68266f7382edd261fd788c9a"
+    "$oid": "6831f451c081361659e7eceb"
   },
-  "nombre": "asd",
-  "piso": "1",
-  "bloque": "C",
-  "categoria": "Novela",
+  "nombre": "Biblioteca",
+  "piso": "2",
+  "bloque": "General",
+  "categoria": "Biblioteca",
   "_class": "com.example.mapping.entidad.Lugar"
 }]
